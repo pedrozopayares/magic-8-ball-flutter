@@ -2,22 +2,25 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(
       MaterialApp(
-        home: Magic8Ball(),
+        home: BallPage(),
       ),
     );
 
-class Magic8Ball extends StatefulWidget {
-  Magic8Ball({Key key}) : super(key: key);
+class BallPage extends StatelessWidget {
+  const BallPage({Key key}) : super(key: key);
 
-  @override
-  _Magic8BallState createState() => _Magic8BallState();
-}
-
-class _Magic8BallState extends State<Magic8Ball> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('Hello, World!'),
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      appBar: AppBar(
+        backgroundColor: Colors.blue[900],
+        title: Text(
+          'Ask Me Anything',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+      body: Container(),
     );
   }
 }
